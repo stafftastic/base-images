@@ -3,7 +3,7 @@
 , curl
 , buildEnv
 , dockerTools
-, imageName ? "webapp-base-image"
+, imageName ? "nodejs-base-image"
 , imageTag ? "local"
 , extraEnv ? []
 , extraPkgs ? []
