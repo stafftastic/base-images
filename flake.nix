@@ -15,6 +15,7 @@
       laravel = pkgs.callPackage ./laravel;
       nodejs = pkgs.callPackage ./nodejs;
       python = pkgs.callPackage ./python;
+      nginx = pkgs.callPackage ./nginx;
     in {
       laravel = laravel {};
       laravelPhp74 = laravel { php = pkgs.php74; };
@@ -31,6 +32,7 @@
       python310 = python { python = pkgs.python310; };
       python311 = python { python = pkgs.python311; };
       python312 = python { python = pkgs.python312; };
+      nginx = nginx {};
     });
   };
 }
