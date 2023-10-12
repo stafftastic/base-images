@@ -14,6 +14,7 @@
       pkgs = pkgsFor.${system};
       laravel = pkgs.callPackage ./laravel;
       nodejs = pkgs.callPackage ./nodejs;
+      python = pkgs.callPackage ./python;
     in {
       laravel = laravel {};
       laravelPhp74 = laravel { php = pkgs.php74; };
@@ -25,6 +26,11 @@
       nodejs16 = nodejs { nodejs = pkgs.nodejs-16_x; };
       nodejs18 = nodejs { nodejs = pkgs.nodejs-18_x; };
       nodejs20 = nodejs { nodejs = pkgs.nodejs-20_x; };
+      python = python {};
+      python39 = python { python = pkgs.python39; };
+      python310 = python { python = pkgs.python310; };
+      python311 = python { python = pkgs.python311; };
+      python312 = python { python = pkgs.python312; };
     });
   };
 }
