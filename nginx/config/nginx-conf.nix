@@ -22,6 +22,15 @@
       index index.html;
       client_max_body_size 50m;
       root /app/public;
+      location /_probes {
+        default_type application/json;
+        location = /_probes/readiness {
+          return 200 '{"ready":true}';
+        }
+        location = /_probes/liveness {
+          return 200 '{"live":true}';
+        }
+      }
     }
   }
 ''
