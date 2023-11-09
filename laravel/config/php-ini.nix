@@ -9,7 +9,7 @@
   max_execution_time = 300
   max_input_time = 300
   post_max_size = 50M
-  upload_max_size = 50M
+  upload_max_filesize = 50M
   max_input_vars = 5000
   expose_php = Off
   date.timezone = UTC
