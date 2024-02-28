@@ -47,7 +47,8 @@ in dockerTools.buildImage {
   };
   runAsRoot = ''
     #!${bash}/bin/bash
-    mkdir -pm1777 /tmp
+    mkdir -p /tmp
+    chmod 1777 /tmp
     mkdir -p /entrypoint.d /var/cache/nginx /app
   '';
   config = {
