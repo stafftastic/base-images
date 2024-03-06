@@ -24,9 +24,8 @@
       laravelPhp82 = laravel { php = pkgs.php82; };
       laravelPhp83 = laravel { php = pkgs.php83; };
       nodejs = nodejs {};
-      nodejs16 = nodejs { nodejs = pkgs.nodejs-16_x; };
-      nodejs18 = nodejs { nodejs = pkgs.nodejs-18_x; };
-      nodejs20 = nodejs { nodejs = pkgs.nodejs-20_x; };
+      nodejs18 = nodejs { nodejs = pkgs.nodejs_18; };
+      nodejs20 = nodejs { nodejs = pkgs.nodejs_20; };
       python = python {};
       python39 = python { python = pkgs.python39; };
       python310 = python { python = pkgs.python310; };
