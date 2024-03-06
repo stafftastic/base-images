@@ -5,7 +5,7 @@
   short_open_tag = Off
   variables_order = 'GPCS'
   request_order = 'GP'
-  memory_limit = 512M
+  memory_limit = -1
   max_execution_time = 300
   max_input_time = 300
   post_max_size = 50M
