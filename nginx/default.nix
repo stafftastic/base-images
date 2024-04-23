@@ -9,9 +9,14 @@
 , imageTag ? "local"
 , extraEnv ? []
 , extraPkgs ? []
+, extraNginxConfig ? ""
+, extraHttpConfig ? ""
+, extraServerConfig ? ""
 }: let
   config = {
-    nginxConf = callPackage ./config/nginx-conf.nix {};
+    nginxConf = callPackage ./config/nginx-conf.nix {
+      inherit extraNginxConfig extraHttpConfig extraServerConfig;
+    };
   };
   bin = buildEnv {
     name = "bin";

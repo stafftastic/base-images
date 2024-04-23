@@ -1,5 +1,8 @@
 { nginx
 , writeText
+, extraNginxConfig ? ""
+, extraHttpConfig ? ""
+, extraServerConfig ? ""
 }: writeText "nginx.conf" ''
   user nobody nobody;
   worker_processes 1;
@@ -31,6 +34,9 @@
           return 200 '{"live":true}';
         }
       }
+      ${extraServerConfig}
     }
+    ${extraHttpConfig}
   }
+  ${extraNginxConfig}
 ''
