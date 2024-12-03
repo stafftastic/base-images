@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-23.11";
+    nixpkgs.url = "nixpkgs/nixos-24.11";
     systems.url = "github:nix-systems/default";
   };
 
@@ -23,9 +23,11 @@
       laravelPhp81 = laravel { php = pkgs.php81; };
       laravelPhp82 = laravel { php = pkgs.php82; };
       laravelPhp83 = laravel { php = pkgs.php83; };
+      laravelPhp84 = laravel { php = pkgs.php84; };
       nodejs = nodejs {};
       nodejs18 = nodejs { nodejs = pkgs.nodejs_18; };
       nodejs20 = nodejs { nodejs = pkgs.nodejs_20; };
+      nodejs22 = nodejs { nodejs = pkgs.nodejs_22; };
       python = python {};
       python39 = python { python = pkgs.python39; };
       python310 = python { python = pkgs.python310; };
